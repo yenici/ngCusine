@@ -1,0 +1,18 @@
+<nav class="mdl-navigation">
+  <a
+    *ngIf="!user"
+    routerLink="/"
+    class="mdl-navigation__link"
+    (click)="onSignIn()">Log in</a>
+
+  <img
+    *ngIf="user"
+    class="user-avatar"
+    [src]="user.photoURL"
+    alt="user.displayName" />
+  <a
+    *ngIf="user"
+    routerLink="/"
+    class="mdl-navigation__link"
+    (click)="onSignOut()">Log out</a>
+</nav>

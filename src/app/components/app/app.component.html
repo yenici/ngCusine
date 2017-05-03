@@ -1,0 +1,21 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Recipe Book</span>
+      <div class="mdl-layout-spacer"></div>
+      <app-authentication></app-authentication>
+    </div>
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a routerLink="/recipes" class="mdl-layout__tab" routerLinkActive="is-active">Recipes</a>
+      <a routerLink="/shopping-list" class="mdl-layout__tab" routerLinkActive="is-active">Shopping list</a>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Title</span>
+  </div>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active">
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</div>

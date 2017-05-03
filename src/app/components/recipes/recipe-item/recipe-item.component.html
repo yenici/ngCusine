@@ -1,0 +1,18 @@
+<li class="mdl-list__item mdl-list__item--three-line">
+  <span class="mdl-list__item-primary-content">
+      <img
+        [src]="recipe.imagePath"
+        alt="{{recipe.name}}"
+        class="recipe-img"
+      >
+      <span>{{recipe.name}}</span>
+      <span class="mdl-list__item-text-body">{{recipe.description}}</span>
+    </span>
+  <span class="mdl-list__item-secondary-content">
+  <a class="mdl-list__item-secondary-action"
+     style="cursor: pointer"
+     [routerLink]="[recipe.id]"
+     routerLinkActive="active">
+    <i class="material-icons">description</i></a>
+  </span>
+</li>
