@@ -1,0 +1,12 @@
+.demo-card-wide.mdl-card {
+  /*width: 512px;*/
+  width: 100%;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: 176px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg') center / cover;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}

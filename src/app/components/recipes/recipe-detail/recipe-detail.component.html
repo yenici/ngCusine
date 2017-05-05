@@ -1,43 +1,6 @@
-<style>
-  .demo-card-square.mdl-card {
-    width: 100%px;
-    /*height: 320px;*/
-  }
-  /*.demo-card-square > .mdl-card__title {*/
-    /*color: #fff;*/
-    /*background:*/
-      /*url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;*/
-  /*}*/
-</style>
-
-<div *ngIf="recipe" class="demo-card-square mdl-card mdl-shadow--2dp">
-  <div class="mdl-card__title mdl-card--expand">
-    <h2 class="mdl-card__title-text">{{ recipe.name }}</h2>
-  </div>
-
-  <div class="mdl-card__media">
-    <img
-      [src]="recipe.imagePath"
-      alt="{{ recipe.name }}"
-      class="img-responsive"
-      style="max-height: 300px">
-  </div>
-
-  <div class="mdl-card__supporting-text">{{ recipe.description }}</div>
-  <div class="mdl-card__actions mdl-card--border">
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      View Updates
-    </a>
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Edit
-    </a>
-    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-      Delete
-    </a>
-  </div>
+<div *ngIf="!recipe" class="row">
+  <div class="col-xs-12">LOADING...</div>
 </div>
-
-<!--<div *ngIf="!recipe" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>-->
 
 <div *ngIf="recipe">
   <div class="row">
@@ -75,13 +38,17 @@
       {{ recipe.description }}
     </div>
   </div>
+  <h3>Ingredients:</h3>
   <div class="row">
     <div class="col-xs-12">
       <ul class="list-group">
         <li
           class="list-group-item"
           *ngFor="let ingredient of recipe.ingredients">
-          {{ ingredient.name }} - {{ ingredient.amount }}
+          <div class="row">
+            <div class="col-xs-10">{{ ingredient.name }}</div>
+            <div class="col-xs-2">{{ ingredient.amount }} {{ ingredient.unit }}</div>
+          </div>
         </li>
       </ul>
     </div>

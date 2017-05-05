@@ -1,4 +1,4 @@
-# NgCusine
+# Cousine - Course project for Udemy's Angular 4 course by Maximilian Schwarzmüller
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 

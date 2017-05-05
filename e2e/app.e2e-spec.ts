@@ -1,10 +1,10 @@
-import { NgCusinePage } from './app.po';
+import { CousinePage } from './app.po';
 
-describe('ng-cusine App', () => {
-  let page: NgCusinePage;
+describe('cousine App', () => {
+  let page: CousinePage;
 
   beforeEach(() => {
-    page = new NgCusinePage();
+    page = new CousinePage();
   });
 
   it('should display message saying app works', () => {

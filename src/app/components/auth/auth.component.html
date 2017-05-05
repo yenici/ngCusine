@@ -1,0 +1,17 @@
+<ul class="nav navbar-nav navbar-right">
+  <li *ngIf="!user">
+    <a routerLink="/signin" routerLinkActive="active">Login</a>
+  </li>
+  <li *ngIf="!user">
+    <a routerLink="/signup" routerLinkActive="active">Register</a>
+  </li>
+  <li *ngIf="user && user.photoURL">
+    <img
+      class="user-avatar"
+      [src]="user.photoURL"
+      alt="user.displayName" />
+  </li>
+  <li *ngIf="user">
+    <a (click)="onSignOut()" style="cursor: pointer">Logout</a>
+  </li>
+</ul>

@@ -1,45 +1,24 @@
-import {Ingredient} from './ingredient.model';
+import { Ingredient } from './ingredient.model';
 
 export class Recipe {
   public id: string;
   public name = '';
   public description = '';
   public imagePath = '';
-  public ingredients = [];
+  public ingredients: Ingredient[] = [];
 
-  constructor(data: object) {
-    Object.assign(this, data);
+  constructor(recipe?: object) {
+    if (recipe) {
+      Object.assign(this, recipe);
+    }
   }
 
-  // constructor(
-  //   public name: string,
-  //   public description: string,
-  //   public imagePath: string,
-  //   public ingredients: Ingredient[],
-  //   id?: string
-  // ) {
-  //   if (id) {
-  //     this.uid = id;
-  //   }
-  // }
-  //
-  // get id() {
-  //   return this.uid;
-  // }
-
-  get isNew() {
+  get isNew(): boolean {
     return !this.id;
   }
 
-  // update(
-  //   name: string,
-  //   description: string,
-  //   imagePath: string,
-  //   ingredients: Ingredient[]
-  // ) {
-  //   this.name = name;
-  //   this.description = description;
-  //   this.imagePath = imagePath;
-  //   this.ingredients = ingredients;
-  // }
+  update(recipe: object): void {
+    const id = this.id;
+    Object.assign(this, recipe, { id });
+  }
 }

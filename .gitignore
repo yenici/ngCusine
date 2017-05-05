@@ -41,5 +41,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Credeentials
+# Credentials
 /src/app/firebase.config.ts

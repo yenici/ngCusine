@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class NgCusinePage {
+export class CousinePage {
   navigateTo() {
     return browser.get('/');
   }
