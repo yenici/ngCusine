@@ -6,14 +6,17 @@ describe('RecipeStartComponent', () => {
   let component: RecipeStartComponent;
   let fixture: ComponentFixture<RecipeStartComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ RecipeStartComponent ]
-    })
-    .compileComponents();
-  }));
+  // beforeEach(async(() => {
+  //   TestBed.configureTestingModule({
+  //     declarations: [ RecipeStartComponent ]
+  //   })
+  //   .compileComponents();
+  // }));
 
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      declarations: [RecipeStartComponent]
+    });
     fixture = TestBed.createComponent(RecipeStartComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
@@ -22,4 +25,10 @@ describe('RecipeStartComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // it('should render title in h3 tag', () => {
+  //   const compiled = fixture.debugElement.nativeElement;
+  //   expect(compiled.querySelector('h1').textContent).toContain('Please select a recipe');
+  // });
+
 });
